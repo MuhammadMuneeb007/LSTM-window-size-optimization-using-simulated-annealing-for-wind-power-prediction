@@ -139,4 +139,4 @@ for windfarm in ['z1','z2','z3']:
     print('Test Explained_variance_score: ', texplained_variance_Score)
     later = datetime.now()
     difference = later-now
-
+    print(difference)
