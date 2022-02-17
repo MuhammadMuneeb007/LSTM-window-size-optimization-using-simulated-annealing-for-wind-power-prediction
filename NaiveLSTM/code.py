@@ -138,5 +138,5 @@ for windfarm in ['z1','z2','z3']:
     print('Test r2_score:',  tr2_Score)  #best if close to one
     print('Test Explained_variance_score: ', texplained_variance_Score)
     later = datetime.now()
-    difference = later-now
+    difference = (later-now).total_seconds()
     print(difference)
