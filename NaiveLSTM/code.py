@@ -74,8 +74,10 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
 
 
 # Windfarm 1 
-
+from datetime import datetime
+now = datetime.now()
 for windfarm in ['z1','z2','z3']:
+    
     lookback = 1
     print("Lookback Information",lookback)
     dataset = read_csv(windfarm+'.csv', header=0, index_col=0)
@@ -135,4 +137,6 @@ for windfarm in ['z1','z2','z3']:
     print('Test RMSE: ',  trms)
     print('Test r2_score:',  tr2_Score)  #best if close to one
     print('Test Explained_variance_score: ', texplained_variance_Score)
+    later = datetime.now()
+    difference = later-now
 
